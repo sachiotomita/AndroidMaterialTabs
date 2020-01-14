@@ -46,6 +46,7 @@ public class SimpleTabsActivity extends AppCompatActivity {
         adapter.addFragment(new TwoFragment(), "TWO");
         adapter.addFragment(new ThreeFragment(), "THREE");
         viewPager.setAdapter(adapter);
+        viewPager.setCurrentItem(1);
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
@@ -70,6 +71,7 @@ public class SimpleTabsActivity extends AppCompatActivity {
             mFragmentList.add(fragment);
             mFragmentTitleList.add(title);
         }
+
 
         @Override
         public CharSequence getPageTitle(int position) {
